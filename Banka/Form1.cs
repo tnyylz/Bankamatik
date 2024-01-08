@@ -19,6 +19,9 @@ namespace Banka
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
+
             radioButton2.Checked = true;
         }
 
@@ -121,6 +124,12 @@ namespace Banka
         {
             SifreUret sifreUret = new SifreUret();
             sifreUret.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MusteriKayit musteriKayit = new MusteriKayit();
+            musteriKayit.Show();
         }
     }
 }

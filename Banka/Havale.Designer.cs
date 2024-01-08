@@ -106,8 +106,8 @@
             this.Controls.Add(this.txtHesapNo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Havale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Havale / EFT";
             this.ResumeLayout(false);
             this.PerformLayout();

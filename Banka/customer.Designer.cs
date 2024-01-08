@@ -217,7 +217,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "customer";
+            this.Text = "Müşteri İşlemleri";
             this.Load += new System.EventHandler(this.customer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

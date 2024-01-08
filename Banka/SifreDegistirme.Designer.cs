@@ -95,6 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(502, 450);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -103,6 +104,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SifreDegistirme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SifreDegistirme";
             this.Load += new System.EventHandler(this.SifreDegistirme_Load);
             this.ResumeLayout(false);

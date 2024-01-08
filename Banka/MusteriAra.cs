@@ -47,7 +47,7 @@ namespace Banka
                 }
                 else
                 {
-                    MessageBox.Show(txtAra.Text + "Numaralı Kayıt Bulunamadı!", "Arama Hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(txtAra.Text + " " + "Numaralı Kayıt Bulunamadı!", "Arama Hatası", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtID.Text = "";
                     txtTC.Text = "";
                     txtİsim.Text = "";

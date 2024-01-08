@@ -81,6 +81,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ParaCek";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Para Çekme İşlemi";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -45,31 +45,13 @@ namespace Banka
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MusteriEkle musteriEkle = new MusteriEkle();
-            musteriEkle.Show();
+     
 
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MusteriAra musteriAra = new MusteriAra();
-            musteriAra.Show();
-        }
 
        
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MusteriSil musteriSil = new MusteriSil();
-            musteriSil.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MusteriListele musteriListele = new MusteriListele();
-            musteriListele.Show();
-        }
+    
+     
 
         private void administration_Load(object sender, EventArgs e)
         {

@@ -46,7 +46,7 @@ namespace Banka
                 else
                 {
                     reader.Close();
-                    SqlCommand cmd = new SqlCommand("insert into musteri (Tc,ad,soyad,sifre,telefon,bakiye,durum) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", conn);
+                    SqlCommand cmd = new SqlCommand("insert into musteri (Tc,ad,soyad,sifre,telefon,bakiye,durum,cinsiyet) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", conn);
 
                     cmd.Parameters.AddWithValue("@p1", txtTC.Text);
                     cmd.Parameters.AddWithValue("@p2", txtİsim.Text);
@@ -55,6 +55,8 @@ namespace Banka
                     cmd.Parameters.AddWithValue("@p5", maskedTextBox1.Text);
                     cmd.Parameters.AddWithValue("@p6", 0);
                     cmd.Parameters.AddWithValue("@p7", 1);
+                    cmd.Parameters.AddWithValue("@p8", comboBox1.SelectedItem.ToString());
+
 
 
                     int sonuc = cmd.ExecuteNonQuery();
@@ -84,6 +86,7 @@ namespace Banka
                     txtSoyisim.Text = "";
                     txtSifre.Text = "";
                     maskedTextBox1.Text = "";
+                    
 
 
         }
@@ -93,6 +96,13 @@ namespace Banka
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
+        }
+
+        private void MusteriKayit_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("Erkek");
+            comboBox1.Items.Add("Kadın");
+
         }
     }
 }

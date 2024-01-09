@@ -130,6 +130,7 @@ namespace Banka
         {
             MusteriKayit musteriKayit = new MusteriKayit();
             musteriKayit.Show();
+            this.Hide();
         }
     }
 }

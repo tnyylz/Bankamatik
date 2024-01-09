@@ -53,12 +53,6 @@
     <Compile Include="administration.Designer.cs">
       <DependentUpon>administration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bakiye.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bakiye.Designer.cs">
-      <DependentUpon>Bakiye.cs</DependentUpon>
-    </Compile>
     <Compile Include="bankamatikDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +76,12 @@
     </Compile>
     <Compile Include="Havale.Designer.cs">
       <DependentUpon>Havale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HesapBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HesapBilgileri.Designer.cs">
+      <DependentUpon>HesapBilgileri.cs</DependentUpon>
     </Compile>
     <Compile Include="HesapHareketleri.cs">
       <SubType>Form</SubType>
@@ -119,17 +119,11 @@
     <Compile Include="MusteriSil.Designer.cs">
       <DependentUpon>MusteriSil.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParaCek.cs">
+    <Compile Include="ParaCekYatir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParaCek.Designer.cs">
-      <DependentUpon>ParaCek.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ParaYatir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ParaYatir.Designer.cs">
-      <DependentUpon>ParaYatir.cs</DependentUpon>
+    <Compile Include="ParaCekYatir.Designer.cs">
+      <DependentUpon>ParaCekYatir.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,9 +142,6 @@
     <EmbeddedResource Include="administration.resx">
       <DependentUpon>administration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bakiye.resx">
-      <DependentUpon>Bakiye.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="customer.resx">
       <DependentUpon>customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Havale.resx">
       <DependentUpon>Havale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HesapBilgileri.resx">
+      <DependentUpon>HesapBilgileri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HesapHareketleri.resx">
       <DependentUpon>HesapHareketleri.cs</DependentUpon>
@@ -178,11 +172,8 @@
     <EmbeddedResource Include="MusteriSil.resx">
       <DependentUpon>MusteriSil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParaCek.resx">
-      <DependentUpon>ParaCek.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParaYatir.resx">
-      <DependentUpon>ParaYatir.cs</DependentUpon>
+    <EmbeddedResource Include="ParaCekYatir.resx">
+      <DependentUpon>ParaCekYatir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

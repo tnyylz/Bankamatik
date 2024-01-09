@@ -41,6 +41,8 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtSifre
@@ -88,9 +90,9 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(79, 570);
+            this.button1.Location = new System.Drawing.Point(78, 631);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 46);
+            this.button1.Size = new System.Drawing.Size(216, 46);
             this.button1.TabIndex = 6;
             this.button1.Text = "Kayıt Ol!";
             this.button1.UseVisualStyleBackColor = false;
@@ -176,7 +178,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.linkLabel2.Location = new System.Drawing.Point(139, 638);
+            this.linkLabel2.Location = new System.Drawing.Point(143, 690);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(85, 24);
             this.linkLabel2.TabIndex = 19;
@@ -184,12 +186,34 @@
             this.linkLabel2.Text = "Giriş Yap";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label7.Location = new System.Drawing.Point(76, 549);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Cinsiyet";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(80, 577);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 24);
+            this.comboBox1.TabIndex = 21;
+            // 
             // MusteriKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(372, 733);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.maskedTextBox1);
@@ -207,6 +231,7 @@
             this.Name = "MusteriKayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MusteriKayit";
+            this.Load += new System.EventHandler(this.MusteriKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +252,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

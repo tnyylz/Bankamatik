@@ -38,20 +38,11 @@ namespace Banka
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form1 frm = new Form1();
-            frm.Show();
-            this.Close();
-        }
+     
 
      
 
 
-
-       
-    
-     
 
         private void administration_Load(object sender, EventArgs e)
         {
@@ -145,6 +136,11 @@ namespace Banka
             Form1 frm = new Form1();
             frm.Show();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Banka
 {
-    public partial class ParaYatir : Form
+    public partial class ParaCekYatir : Form
     {
-        public ParaYatir()
+        public ParaCekYatir()
         {
             InitializeComponent();
         }
@@ -21,9 +21,50 @@ namespace Banka
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             float sayi = float.Parse(maskedTextBox1.Text);
 
-            if (sayi <= 0 )
+            if (sayi > Form1.mBakiye)
+            {
+                MessageBox.Show("Yetersiz Bakiye", "Para Çekme İşlemi");
+
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("update musteri set bakiye = bakiye - @p1 where ID = @p2", conn);
+
+                cmd.Parameters.AddWithValue("@p1", sayi);
+                cmd.Parameters.AddWithValue("@p2", Form1.mID);
+
+
+
+
+                conn.Open();
+                int sonuc = cmd.ExecuteNonQuery();
+                if (sonuc == 1)
+                {
+                    MessageBox.Show("Para Çekme İşlemi Yapıldı", "Para Çekme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Form1.mBakiye -= sayi;
+
+                    HareketKaydet.kaydet(Form1.mID, (sayi + "TL Para Çekildi"));
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Para Çekme İşlemi Başarısız!", "Para Çekme İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                    maskedTextBox1.Text = "";
+
+                conn.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            float sayi = float.Parse(maskedTextBox2.Text);
+
+            if (sayi <= 0)
             {
                 MessageBox.Show("Geçersiz Para Miktarı", "Para Yatırma İşlemi");
 
@@ -44,7 +85,7 @@ namespace Banka
                 {
                     MessageBox.Show("Para Yatırma İşlemi Yapıldı", "Para Yatırma İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Form1.mBakiye += sayi;
-                    HareketKaydet.kaydet(Form1.mID, ( sayi +  "TL Para Yatırıldı"));
+                    HareketKaydet.kaydet(Form1.mID, (sayi + "TL Para Yatırıldı"));
 
 
 
@@ -53,7 +94,7 @@ namespace Banka
                 {
                     MessageBox.Show("Para Yatırma İşlemi Başarısız!", "Para Yatırma İşlemi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                maskedTextBox1.Text = "";
+                maskedTextBox2.Text = "";
 
                 conn.Close();
             }
